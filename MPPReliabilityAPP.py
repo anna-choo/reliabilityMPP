@@ -88,16 +88,17 @@ class MPP_Reliability_MainWindow(QMainWindow):
             'LSK':['LSK1', 'LSK2', 'LSK3', 'LSK4'],
             'RTH':['RTH1', 'RTH2', 'RTH3', 'RTH4'],
             'LTH':['LTH1', 'LTH2', 'LTH3', 'LTH4'],
-            'RFT':['RF1', 'RF2', 'RF3'],
-            'LFT':['LF1', 'LF2', 'LF3'],
+            'RFT':['RFMB1', 'RFMB2', 'RFMB3'],
+            'LFT':['LFMB1', 'LFMB2', 'LFMB3'],
             'RUA':['RUA1', 'RUA2', 'RUA3', 'RUA4'],
             'LUA':['LUA1', 'LUA2', 'LUA3', 'LUA4'],
             'RFA':['RFA1', 'RFA2', 'RFA3'],
             'LFA':['LFA1', 'LFA2', 'LFA3'],
-            'TS':['SPN1', 'SPN2', 'SPN3'],
-            'SAC':['PVLS1', 'PVLS2', 'PVLS3'],
+            'TS':['T6_1', 'T6_2', 'T6_3'],
+            'SAC':['SACRAL1', 'SACRAL2', 'SACRAL3'],
             'LHMC':['LHMC1', 'LHMC2', 'LHMC3'],
-            'RHMC':['RHMC1', 'RHMC2', 'RHMC3']
+            'RHMC':['RHMC1', 'RHMC2', 'RHMC3'],
+            'ST':['ST1', 'ST2','ST3']
             }
 
         self.marker_list = {
@@ -120,9 +121,11 @@ class MPP_Reliability_MainWindow(QMainWindow):
             'LHMC':['LCAP'],
             'RHMC':['RCAP'],
             ####T spine####### 
-            'TS':['T4', 'T8', 'T10', 'STER', 'XPRO', 'C7'],
+            'TS':['T4', 'T8', 'T10', 'C7'],
+            'ST':['STER', 'XPRO'],
             #########pelvis############
             'SAC':['RASIS', 'RPSIS', 'RICR', 'LASIS', 'LPSIS', 'LICR']
+
             }
 
         self.grouping_list = {
