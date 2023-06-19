@@ -149,6 +149,7 @@ class MPP_Reliability_MainWindow(QMainWindow):
             'RHMC':['hand', 'purple'],
             #######T spine####### 
             'TS':['T_spine', 'grey'],
+            'ST':['T_spine', 'grey'],
             #########pelvis############
             'SAC':['pelvis', 'cyan']
         }
