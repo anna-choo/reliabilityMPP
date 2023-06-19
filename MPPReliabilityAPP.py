@@ -159,75 +159,96 @@ class MPP_Reliability_MainWindow(QMainWindow):
 
 
         # self.setFixedSize(660, 180)
-        self.setFixedSize(660, 260)
+        self.setFixedSize(750, 260)
 
         self.widget = QWidget(self)
         self.setCentralWidget(self.widget)
         self.setWindowTitle('MPP Reliability')
 
+        self.LABEL_MPP1 = QLabel(self.widget)
+        self.LABEL_MPP1.setText("<b> MPP 1 </b>")
+        # self.LABEL_MPP1.setText("Select MPP1 \t\t File 1: ")
+        self.LABEL_MPP1.setGeometry(QRect(40,55,50,20))
+        # self.LABEL_MPP1.setAlignment(Qt.AlignRight)
+
 
         self.LABEL_file1 = QLabel(self.widget)
-        self.LABEL_file1.setText("Select MPP1 file1: ")
-        self.LABEL_file1.setGeometry(QRect(40,40,100,10))
+        self.LABEL_file1.setText("File 1:")
+        # self.LABEL_file1.setText("Select MPP1 \t\t File 1: ")
+        self.LABEL_file1.setGeometry(QRect(90,40,50,20))
+        self.LABEL_file1.setAlignment(Qt.AlignRight)
 
         self.file1_path = QLineEdit(" Please Select", self.widget)
         self.file1_path.setStyleSheet("background-color: White;")
-        self.file1_path.setGeometry(QRect(130, 30, 400, 30))
+        self.file1_path.setGeometry(QRect(150, 30, 450, 30))
 
         self.BUTTON_browse1 = QPushButton("Browse", self.widget)
-        self.BUTTON_browse1.setGeometry(QRect(540, 30, 80, 30))
+        self.BUTTON_browse1.setGeometry(QRect(630, 30, 80, 30))
         self.BUTTON_browse1.clicked.connect(self.browse_files1)
 
 
         self.LABEL_file2 = QLabel(self.widget)
-        self.LABEL_file2.setText("Select MPP2 file1: ")
-        self.LABEL_file2.setGeometry(QRect(40,80,100,10))
+        self.LABEL_file2.setText("File 2:")
+        self.LABEL_file2.setGeometry(QRect(90,80,50,20))
+        self.LABEL_file2.setAlignment(Qt.AlignRight)
+
 
         self.file2_path = QLineEdit(" Please Select", self.widget)
         self.file2_path.setStyleSheet("background-color: White;")
-        self.file2_path.setGeometry(QRect(130, 70, 400, 30))
+        self.file2_path.setGeometry(QRect(150, 70, 450, 30))
 
         self.BUTTON_browse2 = QPushButton("Browse", self.widget)
-        self.BUTTON_browse2.setGeometry(QRect(540, 70, 80, 30))
+        self.BUTTON_browse2.setGeometry(QRect(630, 70, 80, 30))
         self.BUTTON_browse2.clicked.connect(self.browse_files2)
 
+        self.LABEL_MPP2 = QLabel(self.widget)
+        self.LABEL_MPP2.setText("<b> MPP 2 </b>")
+        # self.LABEL_MPP2.setText("Select MPP1 \t\t File 1: ")
+        self.LABEL_MPP2.setGeometry(QRect(40,135,50,20))
+        # self.LABEL_MPP2.setAlignment(Qt.AlignRight)
+
+
         self.LABEL_file3 = QLabel(self.widget)
-        self.LABEL_file3.setText("Select MPP1 file2: ")
-        self.LABEL_file3.setGeometry(QRect(40,120,100,10))
+        self.LABEL_file3.setText("File 1:")
+        self.LABEL_file3.setGeometry(QRect(90,120,50,20))
+        self.LABEL_file3.setAlignment(Qt.AlignRight)
+
         # self.LABEL_file3.show()
 
         self.file3_path = QLineEdit(" Please Select", self.widget)
         self.file3_path.setStyleSheet("background-color: White;")
-        self.file3_path.setGeometry(QRect(130, 110, 400, 30))
+        self.file3_path.setGeometry(QRect(150, 110, 450, 30))
         # self.file3_path.show()
 
         self.BUTTON_browse3 = QPushButton("Browse", self.widget)
-        self.BUTTON_browse3.setGeometry(QRect(540, 110, 80, 30))
+        self.BUTTON_browse3.setGeometry(QRect(630, 110, 80, 30))
         self.BUTTON_browse3.clicked.connect(self.browse_files3)
         # self.BUTTON_browse3.show()
 
         self.LABEL_file4 = QLabel(self.widget)
-        self.LABEL_file4.setText("Select MPP2 file2: ")
-        self.LABEL_file4.setGeometry(QRect(40,160,100,10))
+        self.LABEL_file4.setText("File 2:")
+        self.LABEL_file4.setGeometry(QRect(90,160,50,20))
+        self.LABEL_file4.setAlignment(Qt.AlignRight)
+
         # self.LABEL_file4.show()
 
         self.file4_path = QLineEdit(" Please Select", self.widget)
         self.file4_path.setStyleSheet("background-color: White;")
-        self.file4_path.setGeometry(QRect(130, 150, 400, 30))
+        self.file4_path.setGeometry(QRect(150, 150, 450, 30))
         # self.file4_path.show()
 
 
         self.BUTTON_browse4 = QPushButton("Browse", self.widget)
-        self.BUTTON_browse4.setGeometry(QRect(540, 150, 80, 30))
+        self.BUTTON_browse4.setGeometry(QRect(630, 150, 80, 30))
         self.BUTTON_browse4.clicked.connect(self.browse_files4)
         # self.BUTTON_browse4.show()
 
-        self.compareGraph = QCheckBox("Compare Graph", self.widget)
-        # self.compareGraph.setGeometry(QRect(540, 120, 100, 30))
-        self.compareGraph.setGeometry(QRect(540, 200, 100, 30))
+        self.intraRater = QCheckBox("Intra-rater Reliability", self.widget)
+        # self.intraRater.setGeometry(QRect(540, 120, 100, 30))
+        self.intraRater.setGeometry(QRect(540, 200, 150, 30))
 
-        self.compareGraph.clicked.connect(self.expandSelection)
-        # self.compareGraph.clicked
+        # self.intraRater.clicked.connect(self.expandSelection)
+        # self.intraRater.clicked
 
         self.generateGraphButton = QPushButton("Graph", self.widget)
         # self.generateGraphButton.setGeometry(QRect(440, 120, 90, 30))
@@ -237,57 +258,57 @@ class MPP_Reliability_MainWindow(QMainWindow):
 
 
         
-    def expandSelection(self):
-        # if self.compareGraph.isChecked() == False:
-        #     self.setFixedSize(660, 180)
-        #     self.LABEL_file3.hide()
-        #     self.file3_path.hide()
-        #     self.BUTTON_browse3.hide()
-        #     self.LABEL_file4.hide()
-        #     self.file4_path.hide()
-        #     self.BUTTON_browse4.hide()
-        #     self.compareGraph.setGeometry(QRect(540, 120, 100, 30))
-        #     self.generateGraphButton.setGeometry(QRect(440, 120, 90, 30))
+    # def expandSelection(self):
+    #     # if self.intraRater.isChecked() == False:
+    #     #     self.setFixedSize(660, 180)
+    #     #     self.LABEL_file3.hide()
+    #     #     self.file3_path.hide()
+    #     #     self.BUTTON_browse3.hide()
+    #     #     self.LABEL_file4.hide()
+    #     #     self.file4_path.hide()
+    #     #     self.BUTTON_browse4.hide()
+    #     #     self.intraRater.setGeometry(QRect(540, 120, 100, 30))
+    #     #     self.generateGraphButton.setGeometry(QRect(440, 120, 90, 30))
 
 
 
-        # else:
-        self.setFixedSize(660, 260)
+    #     # else:
+    #     self.setFixedSize(660, 260)
 
-        self.LABEL_file3 = QLabel(self.widget)
-        self.LABEL_file3.setText("Select MPP1 file2: ")
-        self.LABEL_file3.setGeometry(QRect(40,120,100,10))
-        self.LABEL_file3.show()
+    #     self.LABEL_file3 = QLabel(self.widget)
+    #     self.LABEL_file3.setText("Select MPP1 file2: ")
+    #     self.LABEL_file3.setGeometry(QRect(40,120,100,10))
+    #     self.LABEL_file3.show()
 
-        self.file3_path = QLineEdit(" Please Select", self.widget)
-        self.file3_path.setStyleSheet("background-color: White;")
-        self.file3_path.setGeometry(QRect(130, 110, 400, 30))
-        self.file3_path.show()
+    #     self.file3_path = QLineEdit(" Please Select", self.widget)
+    #     self.file3_path.setStyleSheet("background-color: White;")
+    #     self.file3_path.setGeometry(QRect(130, 110, 400, 30))
+    #     self.file3_path.show()
 
-        self.BUTTON_browse3 = QPushButton("Browse", self.widget)
-        self.BUTTON_browse3.setGeometry(QRect(540, 110, 80, 30))
-        self.BUTTON_browse3.clicked.connect(self.browse_files3)
-        self.BUTTON_browse3.show()
+    #     self.BUTTON_browse3 = QPushButton("Browse", self.widget)
+    #     self.BUTTON_browse3.setGeometry(QRect(540, 110, 80, 30))
+    #     self.BUTTON_browse3.clicked.connect(self.browse_files3)
+    #     self.BUTTON_browse3.show()
 
-        self.LABEL_file4 = QLabel(self.widget)
-        self.LABEL_file4.setText("Select MPP2 file2: ")
-        self.LABEL_file4.setGeometry(QRect(40,160,100,10))
-        self.LABEL_file4.show()
+    #     self.LABEL_file4 = QLabel(self.widget)
+    #     self.LABEL_file4.setText("Select MPP2 file2: ")
+    #     self.LABEL_file4.setGeometry(QRect(40,160,100,10))
+    #     self.LABEL_file4.show()
 
-        self.file4_path = QLineEdit(" Please Select", self.widget)
-        self.file4_path.setStyleSheet("background-color: White;")
-        self.file4_path.setGeometry(QRect(130, 150, 400, 30))
-        self.file4_path.show()
-
-
-        self.BUTTON_browse4 = QPushButton("Browse", self.widget)
-        self.BUTTON_browse4.setGeometry(QRect(540, 150, 80, 30))
-        self.BUTTON_browse4.clicked.connect(self.browse_files4)
-        self.BUTTON_browse4.show()
+    #     self.file4_path = QLineEdit(" Please Select", self.widget)
+    #     self.file4_path.setStyleSheet("background-color: White;")
+    #     self.file4_path.setGeometry(QRect(130, 150, 400, 30))
+    #     self.file4_path.show()
 
 
-        self.compareGraph.setGeometry(QRect(540, 200, 100, 30))
-        self.generateGraphButton.setGeometry(QRect(440, 200, 90, 30))
+    #     self.BUTTON_browse4 = QPushButton("Browse", self.widget)
+    #     self.BUTTON_browse4.setGeometry(QRect(540, 150, 80, 30))
+    #     self.BUTTON_browse4.clicked.connect(self.browse_files4)
+    #     self.BUTTON_browse4.show()
+
+
+    #     self.intraRater.setGeometry(QRect(540, 200, 100, 30))
+    #     self.generateGraphButton.setGeometry(QRect(440, 200, 90, 30))
 
 
 
@@ -418,7 +439,7 @@ class MPP_Reliability_MainWindow(QMainWindow):
         # plt.show()
 
     def plot_graph(self):
-        if self.compareGraph.isChecked() == False:
+        if self.intraRater.isChecked() == False:
             # self.openfile1 = self.file1_path.text()
             # self.openfile2 = self.file2_path.text()
 
